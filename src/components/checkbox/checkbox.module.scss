@@ -1,0 +1,41 @@
+@use '/src/colors';
+
+.container {
+  display: block;
+}
+
+.checkbox {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkbox:checked ~ .checkmark {
+  .icon {
+    fill: colors.$accent-text-color;
+  }
+}
+
+
+.checkmark {
+  transition: background-color 0.25s;
+  cursor: pointer;
+  width: 48px;
+  height: 48px;
+  border-radius: 16px;
+  border: 1px solid colors.$text-color;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    background: colors.$primary-inactive-bg;
+  }
+}
+
+.icon {
+  fill: transparent;
+  transition: fill .1s;
+}

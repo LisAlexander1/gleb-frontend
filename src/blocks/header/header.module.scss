@@ -1,0 +1,70 @@
+@use "/src/colors";
+
+.header {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 48px;
+
+  padding: 48px 72px;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 48px;
+  height: fit-content;
+}
+
+.bottom {
+  border-top: 1px solid colors.$text-color;
+  padding: 48px 58px 0 58px;
+  display: flex;
+  justify-content: space-between;
+  gap: 64px;
+  align-self: center;
+}
+
+.logo {
+  width: 210px;
+}
+
+.address {
+  min-width: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-self: stretch;
+}
+
+.contact_button {
+  width: 256px;
+  font-weight: 700;
+}
+
+.phone {
+  text-wrap: nowrap;
+}
+
+.block {
+  border-bottom: 1px solid colors.$text-color;
+  position: sticky;
+  align-self: flex-start;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-bottom: 64px;
+}
+
+.link {
+  text-decoration: none;
+  padding: 16px 32px;
+  border-radius: 16px;
+}
+
+.current_page {
+  border: 1px solid colors.$text-color;
+  color: colors.$accent-text-color;
+}

@@ -1,0 +1,56 @@
+@use '/src/colors';
+
+.card {
+  background-color: colors.$dark-bg;
+  border-radius: 24px;
+  overflow: clip;
+  height: 386px;
+  display: flex;
+  gap:21px;
+
+  color: colors.$light-color;
+}
+
+.text_block {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 32px 16px  16px  16px;
+}
+
+.photo {
+  width: 213px;
+  height: 386px;
+  object-fit: cover;
+  object-position: 52% center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  & > button {
+    width: 50%;
+    align-self: flex-end;
+    border-radius: 28px;
+  }
+}
+
+.about_link {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: 1px solid colors.$bg;
+  height: 45px;
+  align-items: center;
+
+
+}

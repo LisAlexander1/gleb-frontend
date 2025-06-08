@@ -1,0 +1,17 @@
+@use "/src/colors";
+
+.container {
+  padding: 48px 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.logo {
+  width: 535px;
+}
+
+.header {
+  color: colors.$accent-text-color
+}

@@ -1,0 +1,25 @@
+@use "/src/colors";
+
+.row {
+  display: flex;
+  justify-content: stretch;
+  text-decoration: none;
+  border-bottom: 1px solid colors.$text-color;
+  padding: 32px;
+  align-items: center;
+  & > li {
+    width: 100%;
+    margin-left: 2.2rem;
+    &::marker {
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 120%;
+      font-family: 'Open Sans Light', sans-serif;
+    }
+  }
+}
+
+.inside_wrapper {
+  display: flex;
+  justify-content: space-between;
+}

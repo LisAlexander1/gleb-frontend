@@ -1,0 +1,62 @@
+@use '/src/colors';
+
+.grid {
+  display: grid;
+  gap: 32px;
+  grid-template-columns: 1fr 2fr;
+  margin-bottom: 32px;
+
+  & img {
+    width: 100%;
+    border-radius: 24px;
+    border: colors.$border-dark;
+    aspect-ratio: 1/1.5;
+    object-fit: cover;
+    object-position: 55% center;
+    margin-bottom: 16px;
+  }
+}
+
+.photo_wrapper {
+  & button {
+    width: 100%;
+  }
+}
+
+.name_header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.education_row {
+  display: flex;
+  align-items: center;
+  border-bottom: colors.$border-dark;
+  padding: 32px 10px;
+  gap: 32px;
+}
+
+.practical_row {
+  margin: 10px 32px 10px 0;
+  list-style-type: none;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 24px;
+    height: 1px;
+    background: colors.$accent-text-color;
+    margin-right: 8px;
+
+  }
+
+
+}

@@ -1,0 +1,10 @@
+.block {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  & > * {
+    max-width: 1440px;
+    width: 100%;
+  }
+}

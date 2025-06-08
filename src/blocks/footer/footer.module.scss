@@ -1,0 +1,79 @@
+@use "/src/colors";
+
+.block {
+  background: colors.$dark-bg;
+  border-radius: 48px 48px 0 0;
+}
+
+.footer {
+  padding: 48px;
+  color: colors.$primary-fg;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.divider {
+  border: 3px solid colors.$primary-fg;
+  flex-grow: 1;
+  height: 0;
+}
+
+a {
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.top {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  padding-bottom: 32px;
+  border-bottom: 2px solid colors.$primary-fg;
+}
+
+.middle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 32px;
+  gap: 32px;
+  border-bottom: 2px solid colors.$primary-fg;
+}
+
+.bottom {
+  display: flex;
+  gap: 32px;
+}
+
+.email {
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.work_time {
+  text-align: right;
+}
+
+.no_wrap {
+  text-wrap: nowrap;
+  white-space: nowrap;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+.buttons {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  flex-basis: 50%;
+}
