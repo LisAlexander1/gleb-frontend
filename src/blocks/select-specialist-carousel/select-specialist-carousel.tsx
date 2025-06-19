@@ -24,6 +24,7 @@ function SelectSpecialistCarousel({onSelectChange}: Props) {
 	  id: index,
 	  renderItem: (
 		<label>
+
 		  <input checked={specialist == selectedSpecialist} onChange={(event) => {
 			setSelectedSpecialist(specialist);
 			onSelectChange && onSelectChange(specialist);
