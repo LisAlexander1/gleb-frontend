@@ -8,6 +8,7 @@ import ServicesPage from './pages/services/services.page.tsx';
 import About from './pages/about/about.tsx';
 import SpecialistPage from './pages/specialist/specialist.page.tsx';
 import ErrorBoundary from './pages/error-boundary/error-boundary.page.tsx';
+import AppointmentPage from './pages/appointment/appointment.page.tsx';
 
 
 const router = createBrowserRouter([
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
                 path: "/specialist/:slug",
                 element: <SpecialistPage/>,
             },
+		  {
+			path: "/appointment",
+			element: <AppointmentPage/>,
+		  }
         ]
     }
 ]);

@@ -35,8 +35,9 @@
 }
 
 .photo {
-  width: 336px;
-  height: 184px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
 }
 
 .bottom {
@@ -51,4 +52,12 @@
 
 .large {
   padding: 32px 40px;
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    padding: 16px;
+
+  }
+
 }

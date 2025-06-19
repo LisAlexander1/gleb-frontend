@@ -26,7 +26,6 @@
     right: 0;
     bottom: 0;
     width: 72px;
-    background: linear-gradient(90deg,transparent 0%, colors.$bg 70%);
   }
 
   &::before {
@@ -39,7 +38,6 @@
     bottom: 0;
     width: 72px;
     z-index: 1000;
-    background: linear-gradient(270deg,transparent 0%, colors.$bg 70%);
   }
 }
 
@@ -61,5 +59,28 @@
 
   svg {
     height: 25px;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .carousel {
+
+    &::after {
+      background: linear-gradient(90deg, transparent 0%, colors.$bg 70%);
+    }
+
+    &::before {
+      background: linear-gradient(270deg, transparent 0%, colors.$bg 70%);
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .control {
+    display: none;
+  }
+
+  .bottom {
+    justify-content: center;
   }
 }

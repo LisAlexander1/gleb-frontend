@@ -9,9 +9,13 @@
 }
 
 .logo {
-  width: 535px;
+  width: 95%;
+  max-width: 535px;
 }
 
 .header {
-  color: colors.$accent-text-color
+  color: colors.$accent-text-color;
+  text-align: center;
+
 }
+

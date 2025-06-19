@@ -1,7 +1,7 @@
 import styles from "./header.module.scss";
-import Button from '../../components/button/button.tsx';
 import BlockLayout from '../../layouts/block-layout/block-layout.tsx';
 import { Link, useLocation } from 'react-router';
+import LinkButton from '../../components/link-button/link-button.tsx';
 
 const links = [
   {
@@ -36,9 +36,9 @@ function Header() {
 			<p>Пн-Пт 8:00-20:00</p>
 		  </div>
 		  <h3 className={styles.phone}>+7 (999) 999-99-99</h3>
-		  <Button className={styles.contact_button}>
+		  <LinkButton to="/appointment" className={styles.contact_button}>
 			Записаться на&nbsp;прием
-		  </Button>
+		  </LinkButton>
 		</div>
 		<div className={styles.bottom}>
 		  {links.map((link, index) =>

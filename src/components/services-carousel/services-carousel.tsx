@@ -14,22 +14,22 @@ type Props = {
   to?: string;
 }
 
-function ServicesCarousel(props: Props) {const {
-  carouselFragment,
-  slideToPrevItem,
-  slideToNextItem
-} = useSpringCarousel ({
-  itemsPerSlide: 4,
-  withLoop: true,
-  slideType: 'fluid',
-  items: services.map((service, index) => ({
-	id: index,
-	renderItem: (
-	  <ServiceItem service={service} size={props.size}/>
+function ServicesCarousel(props: Props) {
+  const {
+	carouselFragment,
+	slideToPrevItem,
+	slideToNextItem
+  } = useSpringCarousel({
+	itemsPerSlide: 4,
+	withLoop: true,
+	items: services.map((service, index) => ({
+	  id: index,
+	  renderItem: (
+		<ServiceItem service={service} size={props.size}/>
 
-	),
-  })),
-});
+	  ),
+	})),
+  });
   return (
 	<div className={styles.block}>
 	  <header className={styles.header}>
