@@ -18,12 +18,14 @@ jobs:
         uses: actions/setup-node@v4
 
       - name: Install dependencies
-        uses: borales/actions-yarn@v4
+        uses: borales/actions-yarn@v5
         with:
           cmd: install # will run `yarn install` command
 
-      - name: Build project
-        run: yarn run build
+      - name: Build production bundle
+        uses: borales/actions-yarn@v5
+        with:
+          cmd: build # will run `yarn build:prod` command
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
