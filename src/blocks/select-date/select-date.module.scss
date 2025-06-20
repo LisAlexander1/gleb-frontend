@@ -1,0 +1,58 @@
+@use "/src/colors";
+
+.block {
+  margin-bottom: 32px;
+}
+.header {
+  margin-bottom: 32px;
+}
+
+.columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 32px;
+}
+
+.date {
+  width: 100%;
+}
+
+.slots_wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.slot {
+  padding: 16px;
+  user-select: none;
+  border-radius: 8px;
+  width: 133px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: colors.$border-dark;
+
+  & input {
+    display: none;
+  }
+
+  &:has(*:checked) {
+    background-color: colors.$inactive-text-color;
+  }
+}
+
+.date {
+  font-size: 36px;
+}
+
+@media screen and (max-width: 600px) {
+  .columns {
+    flex-direction: column;
+  }
+
+  .date {
+    font-size: 20px;
+  }
+}

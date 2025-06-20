@@ -10,7 +10,6 @@ function Services() {
 		<h1>Наши услуги</h1>
 	  </header>
 	  <ServicesCarousel services={services} header={'Популярные анализы'} size='small'/>
-	  <ServicesCarousel services={services} header={'Популярные анализы'} size='large'/>
 	</BlockLayout>
   );
 }

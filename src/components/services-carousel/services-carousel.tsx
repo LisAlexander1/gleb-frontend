@@ -20,7 +20,7 @@ function ServicesCarousel(props: Props) {
 	slideToPrevItem,
 	slideToNextItem
   } = useSpringCarousel({
-	itemsPerSlide: 4,
+	itemsPerSlide: 8,
 	withLoop: true,
 	items: services.map((service, index) => ({
 	  id: index,

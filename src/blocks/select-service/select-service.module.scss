@@ -1,0 +1,37 @@
+@use "/src/colors";
+
+.block {
+  margin-bottom: 32px;
+}
+
+.header {
+  margin-bottom: 32px;
+}
+
+.service_row {
+  border: colors.$border-dark;
+  border-radius: 24px;
+  padding: 32px;
+  display: flex;
+  justify-content: space-between;
+
+  & input {
+    display: none;
+  }
+  &:has(*:checked) {
+    background-color: colors.$inactive-text-color;
+  }
+
+  .cost {
+    color: colors.$accent-text-color;
+    &:after {
+      content: '₽';
+    }
+  }
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

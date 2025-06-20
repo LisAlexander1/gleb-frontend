@@ -4,6 +4,7 @@ import styles from './services.module.scss';
 import {useState} from 'react';
 import ServiceLinkRow from '../../components/service-link-row/service-link-row.tsx';
 import ServiceLinksPage from './services-pages/service-links-page.tsx';
+import { analysis, consultation, usi } from '../../data/services-list.ts';
 
 enum Category {
     consultations = 'consultations',
@@ -49,10 +50,8 @@ function ServicesPage() {
 function ConsultationsPage() {
     return (
         <ServiceLinksPage header="Консультации специалистов">
-            <ServiceLinkRow name="Консультации специалистов" to="spec"/>
-            <ServiceLinkRow name="Консультации специалистов" to="spec"/>
-            <ServiceLinkRow name="Консультации специалистов" to="spec"/>
-            <ServiceLinkRow name="Консультации специалистов" to="spec"/>
+		  {consultation.map(({name}, index) => <ServiceLinkRow key={index} name={name} to="/"/>)}
+
         </ServiceLinksPage>
     )
 }
@@ -60,11 +59,7 @@ function ConsultationsPage() {
 function UsiPage() {
     return (
         <ServiceLinksPage header="Узи">
-            <ServiceLinkRow name="Узи брюшной полости" to="spec"/>
-            <ServiceLinkRow name="Узи брюшной полости" to="spec"/>
-            <ServiceLinkRow name="Узи брюшной полости" to="spec"/>
-            <ServiceLinkRow name="Узи брюшной полости" to="spec"/>
-            <ServiceLinkRow name="Узи брюшной полости" to="spec"/>
+		  {usi.map(({name}, index) => <ServiceLinkRow key={index} name={name} to="/"/>)}
         </ServiceLinksPage>
     )
 }
@@ -73,15 +68,8 @@ function UsiPage() {
 function AnalysisPage() {
     return (
         <ServiceLinksPage header="Анализы">
-            <ServiceLinkRow name="Анализ крови" to="spec"/>
-            <ServiceLinkRow name="Анализ крови" to="spec"/>
-            <ServiceLinkRow name="Анализ крови" to="spec"/>
-            <ServiceLinkRow name="Анализ крови" to="spec"/>
-            <ServiceLinkRow name="Анализ крови" to="spec"/>
-            <ServiceLinkRow name="Анализ крови" to="spec"/>
-            <ServiceLinkRow name="Анализ крови" to="spec"/>
-
-        </ServiceLinksPage>
+		  {analysis.map(({name}, index) => <ServiceLinkRow key={index} name={name} to="/"/>)}
+		</ServiceLinksPage>
     )
 }
 

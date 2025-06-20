@@ -1,0 +1,39 @@
+@use "/src/colors";
+
+.modal {
+  background-color: colors.$light-color;
+  border: colors.$border-dark;
+  padding: 32px;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  label {
+    display: block;
+    color: colors.$accent-text-color;
+  }
+
+  span {
+    font-weight: bold;
+  }
+}
+
+.cost {
+ &:after {
+   content: "₽";
+ }
+}
+
+.wrapper {
+  backdrop-filter: blur(20px) saturate(50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  background: rgba(0, 0, 0, 0.19);
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}

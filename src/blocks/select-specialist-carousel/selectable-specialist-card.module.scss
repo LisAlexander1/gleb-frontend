@@ -1,0 +1,16 @@
+@use "/src/colors";
+
+.card {
+  user-select: none;
+  &:has(*:checked) {
+    & .card_in {
+      background-color: colors.$inactive-text-color;
+    }
+  }
+
+  & input {
+    display: none;
+  }
+
+
+}

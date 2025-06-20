@@ -3,19 +3,19 @@ import styles from "./service-link-row.module.scss";
 
 type Props = {
   name: string,
-  to: string,
+  to?: string,
 }
 
-function ServiceLinkRow({ name, to}: Props) {
+function ServiceLinkRow({ name}: Props) {
   return (
-	<Link className={styles.row} to={to}>
+	<div className={styles.row} >
 	  <li>
           <div className={styles.inside_wrapper}>
               <h3>{name}</h3>
               <img src="/src/assets/arrow-green.svg"/>
           </div>
       </li>
-	</Link>
+	</div>
   );
 }
 

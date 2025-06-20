@@ -6,6 +6,7 @@ import MainLayout from '../../layouts/main-layout/main-layout.tsx';
 import BlockLayout from '../../layouts/block-layout/block-layout.tsx';
 import { Specialist } from '../../types/specialist.ts';
 import styles from '../specialist-carousel/specialist-carouse.module.scss';
+import cardStyle from './selectable-specialist-card.module.scss';
 
 type Props = {
   onSelectChange?: (specialist: Specialist) => void;
@@ -23,14 +24,15 @@ function SelectSpecialistCarousel({onSelectChange}: Props) {
 	items: specialists.map((specialist, index) => ({
 	  id: index,
 	  renderItem: (
-		<label>
-
-		  <input checked={specialist == selectedSpecialist} onChange={(event) => {
+		<label key={index} className={cardStyle.card}>
+		  <input id={`${specialist.id}`} value={selectedSpecialist?.id} onChange={(event) => {
 			setSelectedSpecialist(specialist);
-			onSelectChange && onSelectChange(specialist);
-			console.log(`select ${specialist.lastName}`)
+			if (onSelectChange) {
+			  onSelectChange(specialist);
+			}
+			console.log(`select ${specialist.id}`)
 		  }} type="radio" name="specialist"/>
-		  <SpecialistItem {...specialist}/>
+		  <SpecialistItem {...specialist} className={cardStyle.card_in}/>
 		</label>
 
 	  ),
