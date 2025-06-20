@@ -9,15 +9,22 @@ type Props = {
   slot: string;
   service: Service;
   specialist: Specialist;
+  phone: string;
+  name: string;
 }
 
-function AppointmentModal({date, slot, service, specialist}: Props) {
+function AppointmentModal({date, slot, service, specialist, phone, name}: Props) {
   return (
 	<div className={styles.wrapper}>
 	  <div className={styles.modal}>
 		<header>
 		  <h2>Успешная запись</h2>
 		</header>
+
+		<p>
+		  <label>Контактные данные</label>
+		  <span>{phone} {name}</span>
+		</p>
 
 		<p>
 		  <label>Cпециалист</label>
@@ -38,6 +45,8 @@ function AppointmentModal({date, slot, service, specialist}: Props) {
 		  <label>Время записи</label>
 		  <span>{date} {slot}</span>
 		</p>
+
+
 
 		<LinkButton to="/">
 		  Вернуться

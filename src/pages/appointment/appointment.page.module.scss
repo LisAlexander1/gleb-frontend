@@ -1,0 +1,29 @@
+@use "/src/colors";
+
+.form_block {
+  margin-bottom: 32px;
+  justify-content: center;
+
+  header {
+    align-self: flex-start;
+    margin-bottom: 32px;
+  }
+
+  & > div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.form {
+  padding: 32px;
+  border: colors.$border-dark;
+  border-radius: 48px;
+  display: flex;
+  max-width: 600px;
+  width: 100%;
+  flex-direction: column;
+  gap: 32px;
+}
